@@ -20,10 +20,10 @@ console.log(over);
 var overDiscount = 40;
 
 // comunico se hanno diritto a sconti
-if (under == 1){
+if (under){
   document.getElementById('discountH2').innerHTML=('COMPLIMENTI! ha diritto allo sconto minorenni');
 }
-else if (over == 1){
+else if (over){
   document.getElementById('discountH2').innerHTML=('COMPLIMENTI! ha diritto allo sconto ultrasessantancinquenni');
 }
 else{
@@ -34,11 +34,11 @@ else{
 var cost = kilometers * kilometersCost;
 
 // applico gli sconti e comunico prezzo finale
-if (under == 1){
+if (under){
   document.getElementById('price').innerHTML=(cost-((cost/100)*underDiscount)).toFixed(2);
   console.log('sconto under',underDiscount);
 }
-else if (over == 1){
+else if (over){
   document.getElementById('price').innerHTML=(cost-((cost/100)*overDiscount)).toFixed(2);
   console.log('sconto over',overDiscount);
 }
